@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: >-
+      Tables loaded by scripts/run_data_challenge.py from the seven CSVs in
+      data_challenge/data/. All columns are loaded as text without business
+      transformations, and intentional duplicate rows are retained.
+    tables:
+      - name: raw_applications_cdc
+        description: >-
+          CDC log of applications from the origination core. Each state change
+          appends a row; the current state is the latest version.
+          `_op`: I/U/D. UTC timestamps in mixed formats.
+        meta:
+          candidate_keys: ["(application_id, event_at_utc, _op) after normalizing timestamps; application_id is not unique in the extract"]
+      - name: raw_loans
+        description: >-
+          Disbursed loans originating from approved applications. A loan with no
+          valid associated application is a corrupt record.
+        meta:
+          candidate_keys: ["loan_id"]
+      - name: raw_installments
+        description: >-
+          Installment plan generated at disbursement and immutable. The last
+          installment absorbs the rounding remainder. `due_date` is already a
+          local date.
+        meta:
+          candidate_keys: ["(loan_id, installment_number)"]
+      - name: raw_payments
+        description: >-
+          Payments recorded at the loan level. legacy_v1 uses an LN-<id>
+          reference and minor units; core_v2 uses the ID directly and major
+          units. status REVERSED voids the payment in reversed_payment_id.
+        meta:
+          candidate_keys: ["(source_system, payment_id)"]
+      - name: raw_customers
+        description: >-
+          Customer master. Legal identity is document_number; one person can
+          hold several customer_id values. monthly_income is unvalidated.
+        meta:
+          candidate_keys: ["customer_id (technical)", "document_number (legal identity)"]
+      - name: raw_merchants_history
+        description: >-
+          Append-only history of merchant attributes; each row applies from
+          valid_from. No end date and no current-version flag.
+        meta:
+          candidate_keys: ["(merchant_id, valid_from)"]
+      - name: raw_fx_rates
+        description: >-
+          Official rates per currency, published only on business days.
+          units_per_usd = units of local currency per 1 USD.
+        meta:
+          candidate_keys: ["(rate_date, currency)"]
