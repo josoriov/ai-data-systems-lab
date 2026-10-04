@@ -1,0 +1,24 @@
+name: lumo
+version: '1.0.0'
+config-version: 2
+profile: lumo
+
+model-paths: [models]
+test-paths: [tests]
+target-path: target
+clean-targets: [target, dbt_packages]
+
+flags:
+  send_anonymous_usage_stats: false
+
+vars:
+  cutoff_date: '2026-06-30'
+
+models:
+  lumo:
+    silver:
+      +schema: silver
+      +materialized: table
+    gold:
+      +schema: gold
+      +materialized: table

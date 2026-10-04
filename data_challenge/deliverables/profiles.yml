@@ -1,0 +1,10 @@
+lumo:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: outputs/lumo.duckdb
+      schema: lumo
+      threads: 4
+      settings:
+        TimeZone: UTC
