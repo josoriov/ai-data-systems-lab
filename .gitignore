@@ -1,0 +1,23 @@
+# Personal notes
+.dev-notes/
+
+# Editor
+.vscode/
+
+# Python related
+.venv/
+**/__pycache__/
+*.pyc
+.ruff_cache/
+.cache/
+
+# Env files
+**.env
+
+# dbt and DuckDB artifacts
+data_challenge/deliverables/target/
+data_challenge/deliverables/logs/
+data_challenge/deliverables/dbt_packages/
+data_challenge/deliverables/dbt_internal_packages/
+data_challenge/deliverables/.user.yml
+data_challenge/deliverables/outputs/*.duckdb*
