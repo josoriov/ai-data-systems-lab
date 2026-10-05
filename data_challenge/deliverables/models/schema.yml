@@ -1,0 +1,240 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: One row per real person, identified by document_number.
+    columns:
+      - name: document_number
+        description: Legal identity and model grain.
+        data_tests: [not_null, unique]
+      - name: monthly_income
+        description: Self-reported income parsed to decimal; invalid values are null.
+      - name: customer_id_count
+        description: Number of technical customer IDs assigned to this person.
+
+  - name: dim_merchant
+    description: One row per merchant version (merchant_id, valid_from); SCD type 2.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "merchant_id, valid_from"
+    columns:
+      - name: merchant_id
+        data_tests: [not_null]
+      - name: category
+        description: Category for the half-open validity period [valid_from, valid_to).
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [EDUCATION, ELECTRONICS, FASHION, HEALTH, HOME, MOTORCYCLES, TRAVEL, UNKNOWN]
+      - name: valid_from
+        data_tests: [not_null]
+      - name: valid_to
+        description: Start of the next version; null on the current version.
+      - name: is_current
+
+  - name: fct_application
+    description: One row per non-deleted application in its final CDC state.
+    columns:
+      - name: application_id
+        data_tests: [not_null, unique]
+      - name: customer_id
+        description: Sentinel IDs are replaced by the one known ID found in the application history.
+      - name: merchant_id
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [APPROVED, REJECTED]
+      - name: created_at_utc
+        description: Timestamp of the first CDC event.
+      - name: last_event_at_utc
+        description: Timestamp used to choose the final CDC state.
+
+  - name: fct_loan
+    description: One row per loan backed by a valid approved application.
+    columns:
+      - name: loan_id
+        data_tests: [not_null, unique]
+      - name: application_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fct_application')
+                field: application_id
+      - name: customer_id
+      - name: merchant_id
+      - name: principal
+      - name: currency
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [COP, BRL]
+      - name: disbursement_date
+        description: Bogotá business date derived from disbursed_at_utc.
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [DISBURSED]
+      - name: fx_units_per_usd
+        description: Latest published local-currency units per USD on or before disbursement_date.
+      - name: principal_usd
+        description: principal divided by fx_units_per_usd, cast to decimal(18,6) to keep money exact.
+        data_tests: [not_null, not_negative]
+
+  - name: int_payment_history
+    description: One row per settled source payment, including its later reversal timestamp if any.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "source_system, payment_id"
+    columns:
+      - name: source_system
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [legacy_v1, core_v2]
+      - name: payment_id
+        data_tests: [not_null]
+      - name: loan_id
+      - name: paid_at_utc
+      - name: amount
+        description: Amount in major currency units; legacy values are divided by 100.
+        data_tests: [not_negative]
+      - name: reversed_at_utc
+        description: Timestamp of the reversal; null when the payment was never reversed.
+
+  - name: fct_payment
+    description: One row per effective, non-reversed payment for a valid loan.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "source_system, payment_id"
+    columns:
+      - name: source_system
+        data_tests: [not_null]
+      - name: payment_id
+        data_tests: [not_null]
+      - name: loan_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('fct_loan')
+                field: loan_id
+      - name: paid_date
+        description: Bogotá business date derived from paid_at_utc.
+      - name: amount
+
+  - name: int_installment_status
+    description: One row per month-end, loan, and installment after FIFO payment allocation.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "cutoff_date, loan_id, installment_number"
+    columns:
+      - name: cutoff_date
+        data_tests: [not_null]
+      - name: loan_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_loan')
+                field: loan_id
+      - name: installment_number
+        data_tests: [not_null]
+      - name: amount_due
+      - name: paid_amount
+        description: Payments allocated to the installment in FIFO order by this cutoff.
+      - name: remaining_amount
+        description: amount_due minus paid_amount.
+        data_tests: [not_negative]
+      - name: settlement_at_utc
+        description: Timestamp of the payment that completed the installment.
+      - name: days_past_due
+        description: Days since due_date when still unpaid; otherwise zero.
+
+  - name: fct_installment_status
+    description: One row per loan and installment at the configured final cutoff.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "loan_id, installment_number"
+    columns:
+      - name: loan_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('fct_loan')
+                field: loan_id
+      - name: installment_number
+        data_tests: [not_null]
+      - name: amount_due
+      - name: paid_amount
+        description: Total effective payment allocated FIFO at the final cutoff.
+      - name: remaining_amount
+        description: Unpaid amount at the final cutoff.
+        data_tests: [not_negative]
+      - name: settlement_date
+        description: Bogotá date on which the installment was fully paid.
+      - name: days_past_due
+        description: Days since due_date while the installment is still unpaid at the configured cutoff; otherwise zero.
+
+  - name: agg_merchant_monthly
+    description: One row per merchant and month with applications, loans, FPD30, and PAR30.
+    data_tests:
+      - unique_combination:
+          arguments:
+            columns: "merchant_id, month"
+    columns:
+      - name: merchant_id
+        description: Merchant whose historical SCD version is matched on each event date.
+        data_tests: [not_null]
+      - name: month
+        description: Application month for approval, disbursement cohort for GMV/FPD30, and snapshot month for PAR30.
+        data_tests: [not_null]
+      - name: n_applications
+      - name: n_approved
+      - name: approval_rate
+        description: n_approved divided by n_applications; null with no applications.
+        data_tests: [between_0_and_1]
+      - name: n_loans
+      - name: gmv_usd
+        description: Disbursed principal converted at the disbursement-date FX rate and rounded to cents.
+      - name: fpd30_eligible
+        description: First installments at least 30 days past due date by the final cutoff.
+      - name: fpd30_default
+        description: Eligible first installments paid or still unpaid more than 30 days late.
+      - name: fpd30_rate
+        description: fpd30_default divided by fpd30_eligible.
+        data_tests: [between_0_and_1]
+      - name: outstanding_usd
+        description: Unpaid installments converted to USD at the month-end FX rate and rounded to cents.
+      - name: outstanding_dpd_gt_30_usd
+        description: Outstanding balance from loans with DPD greater than 30.
+      - name: par30_rate
+        description: outstanding_dpd_gt_30_usd divided by outstanding_usd.
+        data_tests: [between_0_and_1]
+
+  - name: dm_loan_delinquency_snapshot
+    description: One row per valid loan at 2026-06-30.
+    columns:
+      - name: loan_id
+        data_tests: [not_null, unique]
+      - name: customer_id
+      - name: merchant_id
+      - name: balance_local
+        description: Sum of unpaid installments, including installments not yet due.
+      - name: balance_usd
+        description: balance_local converted at the snapshot-date FX rate.
+        data_tests: [not_null, not_negative]
+      - name: dpd
+        description: Days since the oldest unpaid due installment; zero when current.
+      - name: dpd_bucket
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['0', '1-30', '31-60', '61-90', '90+']
