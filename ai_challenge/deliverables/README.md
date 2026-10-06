@@ -87,6 +87,8 @@ uv pip install --python .venv/bin/python -r requirements.txt
 The seven tests need no API key or network access once dependencies are installed.
 Live triage calls incur provider usage and send the message text to the API.
 
+[Development notes](HOW_I_WORKED.md) describe the implementation and review process.
+
 ## Limits of this prototype
 
 I do not have labelled data, so the manual batch review is not a substitute for
