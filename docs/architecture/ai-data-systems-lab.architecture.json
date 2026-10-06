@@ -8,7 +8,7 @@
     "output": "docs/architecture/ai-data-systems-lab.html",
     "repository": {
       "url": "https://github.com/josoriov/ai-data-systems-lab.git",
-      "revision": "94ef5eb6f370ef50659cf7430e542908957c198c",
+      "revision": "30415a05bb359a4d4661525d3741edbbd3b8a4bf",
       "provider": "github",
       "link_mode": "web"
     }
@@ -175,14 +175,14 @@
       "sources": [
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 497,
-          "end_line": 520,
+          "line": 503,
+          "end_line": 526,
           "label": "Read inputs and dispatch workers"
         },
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 543,
-          "end_line": 557,
+          "line": 549,
+          "end_line": 563,
           "label": "CLI defaults and credentials"
         }
       ],
@@ -204,14 +204,14 @@
       "sources": [
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 442,
-          "end_line": 461,
+          "line": 447,
+          "end_line": 466,
           "label": "Typed model call and safety pass"
         },
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 510,
-          "end_line": 512,
+          "line": 516,
+          "end_line": 518,
           "label": "API key, timeout and retries"
         }
       ],
@@ -239,14 +239,14 @@
         },
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 442,
-          "end_line": 469,
+          "line": 447,
+          "end_line": 475,
           "label": "Success and error rows"
         },
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 518,
-          "end_line": 539,
+          "line": 524,
+          "end_line": 545,
           "label": "Collect and write batch report"
         }
       ],
@@ -268,14 +268,14 @@
       "sources": [
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 518,
-          "end_line": 539,
+          "line": 524,
+          "end_line": 545,
           "label": "Write ordered rows and summary"
         },
         {
           "path": "ai_challenge/deliverables/triage.py",
-          "line": 543,
-          "end_line": 548,
+          "line": 549,
+          "end_line": 554,
           "label": "Default report path"
         }
       ],
