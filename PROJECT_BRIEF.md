@@ -42,7 +42,7 @@ The warehouse uses three layers:
 - Calculate portfolio at risk (PAR30) as outstanding USD balance on loans more
   than 30 days past due divided by total outstanding USD balance.
 
-### Business questions
+### Questions answered
 
 1. How many valid applications were approved, and what is the approval rate?
 2. How many valid loans were disbursed, and what is their total principal in USD?
@@ -54,8 +54,9 @@ The warehouse uses three layers:
 
 The output contract consists of documented model grains, SQL answer queries,
 CSV exports, and reconciled results. Quality checks cover keys, relationships,
-accepted values, rates, reversal targets, and FIFO conservation. Source field
-semantics and implementation assumptions will accompany the models.
+accepted values, rates, reversal targets, and FIFO conservation. Detailed source
+semantics are in the [data dictionary](data_challenge/data/data_dictionary.md);
+implementation choices are in the [assumptions](data_challenge/deliverables/ASSUMPTIONS.md).
 
 ## Customer-message triage
 
@@ -80,14 +81,15 @@ lookups, and unsupported actions require human handling. Reply templates use
 fictional policy text; missing coverage must not be filled with invented advice.
 The batch output includes per-message rows and reconciled summary counts.
 
-The classification contract will use a contact taxonomy and fictional policies
-with intentional gaps. The [AI project guide](ai_challenge/README.md) describes
-the intended decision boundaries.
+The [taxonomy](ai_challenge/taxonomy.md) defines contact reasons, and the
+[knowledge base](ai_challenge/knowledge_base/README.md) contains fictional policies
+with intentional gaps. The [AI project guide](ai_challenge/README.md) explains
+the implementation and its limits.
 
 ## Scope and reproducibility
 
 Both systems run from local files. The warehouse needs no cloud account; live
-triage needs the user's own provider key. The intended deliverables include
-inspectable outputs, automated data checks, and offline triage tests. Labelled
-model evaluation, throughput testing, deployment, and incremental processing
-are outside the initial scope.
+triage needs the user's own provider key. Existing outputs make the results
+inspectable without executing either pipeline. Automated data checks and offline
+triage tests validate deterministic behavior; labelled model evaluation,
+throughput testing, deployment, and incremental processing remain future work.
