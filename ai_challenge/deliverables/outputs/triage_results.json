@@ -1,0 +1,7083 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-14T19:29:11.214550+00:00",
+    "input_path": "data/messages.jsonl",
+    "model": "gpt-5.6-luna",
+    "message_count": 340,
+    "complete": true,
+    "duration_seconds": 79.595
+  },
+  "summary": {
+    "total_messages": 340,
+    "business_results": 340,
+    "technical_errors": 0,
+    "by_main_reason": {
+      "canales_horarios_atencion": 5,
+      "cancelacion": 15,
+      "certificados_extractos": 21,
+      "consulta_saldo_cuotas": 27,
+      "cuenta_y_app": 18,
+      "datos_personales": 17,
+      "estado_solicitud_credito": 1,
+      "fecha_de_pago": 19,
+      "felicitacion_feedback": 16,
+      "fraude_seguridad": 23,
+      "fuera_de_alcance": 18,
+      "hablar_con_humano": 14,
+      "informacion_productos": 9,
+      "metodos_de_pago": 19,
+      "mora_intereses": 16,
+      "no_puede_pagar": 24,
+      "pago_no_aplicado": 30,
+      "queja_reclamo": 13,
+      "refinanciacion_acuerdo": 14,
+      "reporte_centrales": 21
+    },
+    "by_priority": {
+      "alta": 25,
+      "baja": 113,
+      "media": 202
+    },
+    "by_action": {
+      "descartar": 33,
+      "escalar_humano": 258,
+      "responder_automaticamente": 49
+    },
+    "by_queue": {
+      "cartera": 45,
+      "cx": 99,
+      "fraude": 23,
+      "legal": 24,
+      "pagos": 45,
+      "soporte": 22
+    },
+    "auto_answerable": 49,
+    "auto_answerable_ratio": 0.14411764705882352
+  },
+  "results": [
+    {
+      "id": "MSG-001",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "este mes"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-002",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-003",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "4471"
+        ],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-004",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-005",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-006",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-007",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-008",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-009",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-010",
+      "technical_status": "ok",
+      "main_reason": "canales_horarios_atencion",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-011",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-012",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "este mes"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-013",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "30",
+          "5"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La fecha de pago se define al desembolsar el crédito. Puedes solicitar un cambio una vez por año si estás al día, desde la app o con un asesor.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#fechas-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-014",
+      "technical_status": "ok",
+      "main_reason": "estado_solicitud_credito",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "hace 4 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-015",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles. Al terminar de pagar puedes solicitar el paz y salvo desde Documentos en la app o con un asesor. Al ponerte al día, el reporte se actualiza en el siguiente ciclo, que puede tardar hasta 30 días. Lumo actualiza el estado, no borra el historial.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos",
+        "mora_y_centrales.md#paz-y-salvo",
+        "mora_y_centrales.md#reporte-a-centrales-de-riesgo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-016",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-017",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-018",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-019",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "El interés de mora corre desde el día siguiente al vencimiento. Hay 5 días calendario de gracia antes de un reporte negativo.",
+      "policy_refs": [
+        "mora_y_centrales.md#mora-e-intereses"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-020",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-021",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-022",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ultimo ano"
+        ],
+        "references": [
+          "declaracion de renta"
+        ]
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-023",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-024",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La cuenta se desbloquea después de 30 minutos. Si el bloqueo continúa, un asesor puede ayudarte después de validar tu identidad.",
+      "policy_refs": [
+        "cuenta_app_seguridad.md#cuenta-bloqueada"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-025",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-026",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-027",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [
+          "9000000003"
+        ],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-028",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-029",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-030",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-031",
+      "technical_status": "ok",
+      "main_reason": "canales_horarios_atencion",
+      "secondary_intents": [
+        "hablar_con_humano"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-032",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "hace un mes"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-033",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-034",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-035",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Si un pago en efectivo no se refleja en 24 horas, envía el comprobante a pagos@lumo.example.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-036",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "fecha_de_pago",
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "manana",
+          "lunes"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-037",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-038",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-039",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "2025"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-040",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-101",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-102",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-103",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-104",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-105",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-106",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-107",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "2"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-108",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-109",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-110",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-111",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles. Al terminar de pagar puedes solicitar el paz y salvo desde Documentos en la app o con un asesor.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos",
+        "mora_y_centrales.md#paz-y-salvo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-112",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-113",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [
+          "250000"
+        ],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-114",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "3 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-115",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-116",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-117",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-118",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-119",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-120",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "fecha_de_pago",
+        "metodos_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-121",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "4471"
+        ],
+        "amounts": [],
+        "dates": [
+          "ultimos 6 meses"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-122",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo",
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-123",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-124",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "mayo"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-125",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-126",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-127",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "hace 2 meses"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-128",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-129",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-130",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-131",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-132",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "año pasado"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-133",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-134",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "15 dias"
+        ],
+        "references": [
+          "pqr"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-135",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-136",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-137",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-138",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-139",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [
+          "9000000123"
+        ],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "el mes pasado"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-140",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "datos_personales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "4471"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-141",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "15",
+          "20"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La fecha de pago se define al desembolsar el crédito. Puedes solicitar un cambio una vez por año si estás al día, desde la app o con un asesor.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#fechas-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-142",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-143",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-144",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "2 meses"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-145",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-146",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-147",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-148",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-149",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-150",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-151",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8830"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-152",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-153",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8902"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-154",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-155",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-156",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "9000000456"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-157",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-158",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "PSE"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-159",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8761"
+        ],
+        "amounts": [
+          "185.000"
+        ],
+        "dates": [
+          "04 de mayo"
+        ],
+        "references": [
+          "Bancolombia"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-160",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-161",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-162",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-163",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-164",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "hoy"
+        ],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-165",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8830"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-166",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-167",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-168",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-169",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-170",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-171",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [
+          "9000000789"
+        ],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ultimos 6 meses"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-172",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-173",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-174",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-175",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "3 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-176",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-177",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8755"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-178",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-179",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-180",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-181",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-182",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "datos_personales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-183",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-184",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-185",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-186",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [
+        "canales_horarios_atencion"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-187",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-188",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-189",
+      "technical_status": "ok",
+      "main_reason": "canales_horarios_atencion",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-190",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-191",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-192",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-193",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "metodos_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8830"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-194",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "mora_intereses",
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "otra semana"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-195",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses",
+        "queja_reclamo",
+        "hablar_con_humano"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-196",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [
+        "certificados_extractos",
+        "felicitacion_feedback"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "9000000321"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-197",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-198",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [
+        "metodos_de_pago"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-199",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "8941"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-200",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "cuenta_y_app",
+        "hablar_con_humano"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-201",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-202",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-203",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-204",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-205",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-206",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "mayo"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-207",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-208",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-209",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-210",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-211",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar",
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-212",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-213",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-214",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "viernes"
+        ],
+        "references": [
+          "88231"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-215",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "05 de mayo"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-216",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-217",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "Efecty",
+          "Baloto"
+        ]
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-218",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-219",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-220",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-221",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-222",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Al ponerte al día, el reporte se actualiza en el siguiente ciclo, que puede tardar hasta 30 días. Lumo actualiza el estado, no borra el historial.",
+      "policy_refs": [
+        "mora_y_centrales.md#reporte-a-centrales-de-riesgo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-223",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-224",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-225",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-226",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Actualiza la app, ciérrala y ábrela de nuevo, y revisa tu conexión. Si el problema continúa, comunícate con soporte.",
+      "policy_refs": [
+        "cuenta_app_seguridad.md#app-no-funciona"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-227",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-228",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-229",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-230",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-231",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-232",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "2025"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-233",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-234",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-235",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-236",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-237",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-238",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-239",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-240",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-241",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-242",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "consulta_saldo_cuotas",
+        "metodos_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-243",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-244",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-245",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-246",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-247",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-248",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "fecha_de_pago",
+        "metodos_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-249",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "la semana pasada"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-250",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-251",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-252",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-253",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "este mes"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-254",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-255",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-256",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": [
+          "PSE"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-257",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-258",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [
+          "$120.000",
+          "$138.500"
+        ],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-259",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado",
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-260",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-261",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-262",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-263",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-264",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "4 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-265",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-266",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-267",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-268",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-269",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-270",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ultimos 3 meses"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-271",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "15",
+          "5"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La fecha de pago se define al desembolsar el crédito. Puedes solicitar un cambio una vez por año si estás al día, desde la app o con un asesor.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#fechas-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-272",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-273",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "778192034"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-274",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-275",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-276",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [
+          "CC 1.0xx.xxx.xxx"
+        ],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "2025"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-277",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-278",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "queja_reclamo",
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "el mes pasado"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-279",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-280",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-281",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "pago_no_aplicado",
+        "queja_reclamo"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-282",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-283",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "la semana pasada"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Al ponerte al día, el reporte se actualiza en el siguiente ciclo, que puede tardar hasta 30 días. Lumo actualiza el estado, no borra el historial.",
+      "policy_refs": [
+        "mora_y_centrales.md#reporte-a-centrales-de-riesgo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-284",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-285",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-286",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "15 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-287",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-288",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "mayo"
+        ],
+        "references": [
+          "Bancolombia"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-289",
+      "technical_status": "ok",
+      "main_reason": "canales_horarios_atencion",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-290",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-291",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [
+          "$95.000"
+        ],
+        "dates": [
+          "9 de mayo"
+        ],
+        "references": [
+          "M4471829"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-292",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "queja_reclamo",
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-293",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-294",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "abril"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-295",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-296",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-297",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-298",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "consulta_saldo_cuotas",
+        "fecha_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-299",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-300",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-301",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-302",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-303",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-304",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-305",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [
+          "$150.000"
+        ],
+        "dates": [
+          "ayer"
+        ],
+        "references": [
+          "PSE"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-306",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-307",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "00482910"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-308",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-309",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-310",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-311",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-312",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-313",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-314",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-315",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [
+        "datos_personales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-316",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-317",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-318",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [
+          "1.020.XXX.XXX"
+        ],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-319",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-320",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-321",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-322",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "el lunes"
+        ],
+        "references": [
+          "778452"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-323",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-324",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "hoy"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-325",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "certificados_extractos"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "20 dias"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-326",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-327",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-328",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ultimos 6 meses"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-329",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-330",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-331",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-332",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-333",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-334",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-335",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-336",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La fecha de pago se define al desembolsar el crédito. Puedes solicitar un cambio una vez por año si estás al día, desde la app o con un asesor.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#fechas-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-337",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-338",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [
+        "no_puede_pagar"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-339",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "00557431"
+        ],
+        "amounts": [],
+        "dates": [
+          "9 de mayo"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-340",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-341",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-342",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Al ponerte al día, el reporte se actualiza en el siguiente ciclo, que puede tardar hasta 30 días. Lumo actualiza el estado, no borra el historial.",
+      "policy_refs": [
+        "mora_y_centrales.md#reporte-a-centrales-de-riesgo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-343",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-344",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-345",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles. Al terminar de pagar puedes solicitar el paz y salvo desde Documentos en la app o con un asesor.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos",
+        "mora_y_centrales.md#paz-y-salvo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-346",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-347",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "hablar_con_humano"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-348",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-349",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-350",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [
+        "consulta_saldo_cuotas",
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [
+          "00601238"
+        ],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-351",
+      "technical_status": "ok",
+      "main_reason": "hablar_con_humano",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-352",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [
+        "cuenta_y_app"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-353",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [
+        "consulta_saldo_cuotas"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-354",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-355",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-356",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-357",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-358",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "8 de mayo"
+        ],
+        "references": [
+          "Efecty"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-359",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-360",
+      "technical_status": "ok",
+      "main_reason": "canales_horarios_atencion",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-361",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes solicitar certificados y extractos desde Documentos en la app o con un asesor. La generación puede tardar hasta 2 días hábiles. Al terminar de pagar puedes solicitar el paz y salvo desde Documentos en la app o con un asesor.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#certificados-y-extractos",
+        "mora_y_centrales.md#paz-y-salvo"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-362",
+      "technical_status": "ok",
+      "main_reason": "datos_personales",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes actualizar tu celular y correo desde Mi perfil en la app. El cambio aplica para futuras notificaciones.",
+      "policy_refs": [
+        "datos_certificados_pqr.md#actualizacion-de-datos-personales"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-363",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-364",
+      "technical_status": "ok",
+      "main_reason": "felicitacion_feedback",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-365",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-366",
+      "technical_status": "ok",
+      "main_reason": "refinanciacion_acuerdo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-367",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-368",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-369",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-370",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-371",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-372",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-373",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "cifin"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-374",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-375",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-376",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-377",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": [
+          "datacredito"
+        ]
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-378",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [
+        "fecha_de_pago"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "15"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-379",
+      "technical_status": "ok",
+      "main_reason": "metodos_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "Puedes pagar por PSE, tarjeta débito o crédito, o en efectivo en Efecty y corresponsales bancarios con el código de pago de la app.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#metodos-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-380",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "mayo"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-381",
+      "technical_status": "ok",
+      "main_reason": "cuenta_y_app",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "soporte",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-382",
+      "technical_status": "ok",
+      "main_reason": "cancelacion",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-383",
+      "technical_status": "ok",
+      "main_reason": "reporte_centrales",
+      "secondary_intents": [
+        "pago_no_aplicado"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-384",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "20 de cada mes"
+        ],
+        "references": []
+      },
+      "action": "responder_automaticamente",
+      "queue": null,
+      "draft_reply": "La fecha de pago se define al desembolsar el crédito. Puedes solicitar un cambio una vez por año si estás al día, desde la app o con un asesor.",
+      "policy_refs": [
+        "pagos_y_cuotas.md#fechas-de-pago"
+      ],
+      "error": null
+    },
+    {
+      "id": "MSG-385",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [
+          "ayer"
+        ],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-386",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-387",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [
+        "queja_reclamo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-388",
+      "technical_status": "ok",
+      "main_reason": "mora_intereses",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-389",
+      "technical_status": "ok",
+      "main_reason": "queja_reclamo",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "legal",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-390",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-391",
+      "technical_status": "ok",
+      "main_reason": "certificados_extractos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-392",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses",
+        "hablar_con_humano"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-393",
+      "technical_status": "ok",
+      "main_reason": "informacion_productos",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-394",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "reporte_centrales"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-395",
+      "technical_status": "ok",
+      "main_reason": "fecha_de_pago",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-396",
+      "technical_status": "ok",
+      "main_reason": "no_puede_pagar",
+      "secondary_intents": [
+        "refinanciacion_acuerdo"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cartera",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-397",
+      "technical_status": "ok",
+      "main_reason": "fraude_seguridad",
+      "secondary_intents": [],
+      "priority": "alta",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "fraude",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-398",
+      "technical_status": "ok",
+      "main_reason": "pago_no_aplicado",
+      "secondary_intents": [
+        "mora_intereses"
+      ],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "pagos",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-399",
+      "technical_status": "ok",
+      "main_reason": "fuera_de_alcance",
+      "secondary_intents": [],
+      "priority": "baja",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [],
+        "dates": [],
+        "references": []
+      },
+      "action": "descartar",
+      "queue": null,
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    },
+    {
+      "id": "MSG-400",
+      "technical_status": "ok",
+      "main_reason": "consulta_saldo_cuotas",
+      "secondary_intents": [],
+      "priority": "media",
+      "entities": {
+        "document_numbers": [],
+        "credit_ids": [],
+        "amounts": [
+          "4"
+        ],
+        "dates": [],
+        "references": []
+      },
+      "action": "escalar_humano",
+      "queue": "cx",
+      "draft_reply": null,
+      "policy_refs": [],
+      "error": null
+    }
+  ]
+}

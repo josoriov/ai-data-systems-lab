@@ -61,6 +61,18 @@ sample is synthetic; a real rollout would still need an approved provider,
 retention policy, and a decision on whether those values should be redacted
 before the call.
 
+## Example output
+
+The output contains run metadata, a batch summary, and one result per input
+message. Results include the primary reason, secondary intents, priority,
+entities, action, queue, policy references, and a Spanish draft when automation
+is safe.
+
+The recorded example run used `gpt-5.6-luna`. It processed all 340 messages in
+about 80 seconds with no technical errors: 49 automatic replies, 258 human escalations,
+and 33 discarded messages. Classifications can move slightly between runs, but
+the output contract and safety pass are deterministic.
+
 ## Test
 
 From this directory, create the environment and install dependencies without
