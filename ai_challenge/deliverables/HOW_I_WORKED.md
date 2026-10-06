@@ -69,9 +69,10 @@ to personalize a draft. It was unnecessary and was not verified identity.
 
 ## Validation
 
-I ran seven offline tests for invalid and duplicate input, mandatory-human
+I ran eight offline tests for invalid and duplicate input, mandatory-human
 routing, account-specific and unsupported requests, policy-backed replies,
-entity evidence, safe discards, and summary reconciliation.
+entity evidence, safe discards, summary reconciliation, and redacted error
+rows.
 
 I then ran the complete command and generated a side-by-side view of every
 automatic and discarded result with its source text. On the recorded example run

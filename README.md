@@ -74,7 +74,7 @@ be inspected without a key.
 ## Validation and scope
 
 The data project has 49 dbt tests covering model keys, relationships, valid
-values, payment reversals, and FIFO conservation. The AI project has seven
+values, payment reversals, and FIFO conservation. The AI project has eight
 [offline tests](ai_challenge/deliverables/test_triage.py) that need no API key;
 its [run guide](ai_challenge/deliverables/README.md) includes the test command.
 
