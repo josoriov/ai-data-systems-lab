@@ -48,4 +48,5 @@ a merchant held at the time. The result stays at the required
 - FIFO payment allocation is one set-based model, not a row-by-row loop: see the
   header comment in `models/silver/int_installment_status.sql`.
 
-See [RESULTS.md](RESULTS.md) for the figures and reconciliations.
+See [RESULTS.md](RESULTS.md) for the figures and
+[ASSUMPTIONS.md](ASSUMPTIONS.md) for business rules and data-quality findings.
