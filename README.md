@@ -8,6 +8,26 @@ The implementation combines Python, SQL, dbt, DuckDB, Pydantic, and the OpenAI
 SDK. The datasets and example policies describe a fictional scenario; the
 results below are demonstrations on that data.
 
+## Architecture
+
+![AI & Data Systems Lab architecture: synthetic lending CSVs pass through a local Python, dbt, and DuckDB warehouse to nine CSV reports. Separately, synthetic messages and fictional policies feed a Python triage batch, which calls OpenAI and applies deterministic rules before writing a JSON report.](docs/architecture/ai-data-systems-lab.svg)
+
+[Interactive architecture diagram](docs/architecture/ai-data-systems-lab.html)
+— download the HTML and open it in a browser to explore source references,
+switch between light and dark themes, and export images.
+The [diagram specification](docs/architecture/ai-data-systems-lab.architecture.json)
+is included for reproducibility.
+
+The two workflows run independently. In lending analytics, Python loads raw
+files, invokes dbt to build and test the Bronze → Silver → Gold warehouse in
+DuckDB, and exports the results. In message triage, Python validates inputs,
+assembles policy context, and processes messages concurrently through the
+OpenAI Responses API. Deterministic rules check the model's decisions before
+Python writes the ordered results and summary.
+
+Only live triage calls require a provider key. Routing decisions and reply drafts
+are recorded locally; the prototype does not send replies or create tickets.
+
 ## Projects
 
 | Project | What it does | Explore |

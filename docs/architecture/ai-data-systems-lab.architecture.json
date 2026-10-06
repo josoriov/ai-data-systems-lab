@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "AI & Data Systems Lab",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "output": "docs/architecture/ai-data-systems-lab.html",
+    "repository": {
+      "url": "https://github.com/josoriov/ai-data-systems-lab.git",
+      "revision": "94ef5eb6f370ef50659cf7430e542908957c198c",
+      "provider": "github",
+      "link_mode": "web"
+    }
+  },
+  "components": [
+    {
+      "id": "lending-inputs",
+      "type": "external",
+      "label": "Lending sources",
+      "sublabel": "Seven synthetic CSV datasets",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "data_challenge/deliverables/scripts/run_data_challenge.py",
+          "line": 34,
+          "end_line": 55,
+          "label": "Read seven source files"
+        }
+      ],
+      "tag": "LOCAL INPUT"
+    },
+    {
+      "id": "warehouse",
+      "type": "backend",
+      "label": "Lending warehouse",
+      "sublabel": "Python + dbt + DuckDB",
+      "pos": [
+        355,
+        60
+      ],
+      "size": [
+        220,
+        82
+      ],
+      "sources": [
+        {
+          "path": "data_challenge/deliverables/scripts/run_data_challenge.py",
+          "line": 34,
+          "end_line": 96,
+          "label": "Load, build, test and export"
+        },
+        {
+          "path": "data_challenge/deliverables/dbt_project.yml",
+          "line": 14,
+          "end_line": 24,
+          "label": "Cutoff and model layers"
+        },
+        {
+          "path": "data_challenge/deliverables/README.md",
+          "line": 25,
+          "end_line": 34,
+          "label": "Bronze, Silver and Gold"
+        }
+      ],
+      "tag": "BRONZE → SILVER → GOLD"
+    },
+    {
+      "id": "analytics-exports",
+      "type": "database",
+      "label": "Analytics exports",
+      "sublabel": "Seven answers + two Gold CSVs",
+      "pos": [
+        710,
+        60
+      ],
+      "size": [
+        215,
+        82
+      ],
+      "sources": [
+        {
+          "path": "data_challenge/deliverables/scripts/run_data_challenge.py",
+          "line": 18,
+          "end_line": 31,
+          "label": "Report and Gold registries"
+        },
+        {
+          "path": "data_challenge/deliverables/scripts/run_data_challenge.py",
+          "line": 70,
+          "end_line": 85,
+          "label": "Python exports through DuckDB"
+        }
+      ],
+      "tag": "LOCAL OUTPUT"
+    },
+    {
+      "id": "policy-context",
+      "type": "external",
+      "label": "Taxonomy & policies",
+      "sublabel": "Four fictional policy documents",
+      "pos": [
+        355,
+        230
+      ],
+      "size": [
+        220,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 227,
+          "end_line": 236,
+          "label": "Assemble model instructions"
+        },
+        {
+          "path": "ai_challenge/deliverables/README.md",
+          "line": 40,
+          "end_line": 50,
+          "label": "Policy coverage and handoff"
+        }
+      ],
+      "tag": "LOCAL CONTEXT"
+    },
+    {
+      "id": "message-inputs",
+      "type": "external",
+      "label": "Customer messages",
+      "sublabel": "340 synthetic Spanish messages",
+      "pos": [
+        40,
+        390
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 206,
+          "end_line": 224,
+          "label": "Read and validate JSONL"
+        },
+        {
+          "path": "ai_challenge/data/README.md",
+          "line": 1,
+          "end_line": 13,
+          "label": "Synthetic input contract"
+        }
+      ],
+      "tag": "LOCAL INPUT"
+    },
+    {
+      "id": "triage-batch",
+      "type": "backend",
+      "label": "Triage batch",
+      "sublabel": "Validated input · eight workers",
+      "pos": [
+        355,
+        390
+      ],
+      "size": [
+        220,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 497,
+          "end_line": 520,
+          "label": "Read inputs and dispatch workers"
+        },
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 543,
+          "end_line": 557,
+          "label": "CLI defaults and credentials"
+        }
+      ],
+      "tag": "PYTHON CLI"
+    },
+    {
+      "id": "model-api",
+      "type": "cloud",
+      "label": "OpenAI Responses",
+      "sublabel": "One structured decision per message",
+      "pos": [
+        710,
+        390
+      ],
+      "size": [
+        215,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 442,
+          "end_line": 461,
+          "label": "Typed model call and safety pass"
+        },
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 510,
+          "end_line": 512,
+          "label": "API key, timeout and retries"
+        }
+      ],
+      "tag": "EXTERNAL API · LIVE RUNS"
+    },
+    {
+      "id": "safety-report",
+      "type": "security",
+      "label": "Rules & reporting",
+      "sublabel": "Ground replies · enforce handoffs",
+      "pos": [
+        710,
+        570
+      ],
+      "size": [
+        215,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 313,
+          "end_line": 415,
+          "label": "Deterministic safety rules"
+        },
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 442,
+          "end_line": 469,
+          "label": "Success and error rows"
+        },
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 518,
+          "end_line": 539,
+          "label": "Collect and write batch report"
+        }
+      ],
+      "tag": "LOCAL PYTHON"
+    },
+    {
+      "id": "triage-results",
+      "type": "database",
+      "label": "Triage results",
+      "sublabel": "JSON report · original input order",
+      "pos": [
+        355,
+        570
+      ],
+      "size": [
+        220,
+        82
+      ],
+      "sources": [
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 518,
+          "end_line": 539,
+          "label": "Write ordered rows and summary"
+        },
+        {
+          "path": "ai_challenge/deliverables/triage.py",
+          "line": 543,
+          "end_line": 548,
+          "label": "Default report path"
+        }
+      ],
+      "tag": "LOCAL OUTPUT"
+    }
+  ],
+  "connections": [
+    {
+      "id": "load-lending",
+      "from": "lending-inputs",
+      "to": "warehouse",
+      "label": "load as text",
+      "variant": "emphasis"
+    },
+    {
+      "id": "export-analytics",
+      "from": "warehouse",
+      "to": "analytics-exports",
+      "label": "build & export",
+      "variant": "emphasis"
+    },
+    {
+      "id": "read-messages",
+      "from": "message-inputs",
+      "to": "triage-batch",
+      "label": "read JSONL",
+      "variant": "emphasis"
+    },
+    {
+      "id": "load-context",
+      "from": "policy-context",
+      "to": "triage-batch",
+      "label": "instructions",
+      "variant": "dashed"
+    },
+    {
+      "id": "classify-message",
+      "from": "triage-batch",
+      "to": "model-api",
+      "label": "text + context",
+      "variant": "emphasis"
+    },
+    {
+      "id": "validate-decision",
+      "from": "model-api",
+      "to": "safety-report",
+      "label": "typed result",
+      "variant": "security"
+    },
+    {
+      "id": "write-report",
+      "from": "safety-report",
+      "to": "triage-results",
+      "label": "write report",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Lending analytics",
+      "items": [
+        "Python owns loading, dbt execution and CSV export.",
+        "DuckDB stores raw, Silver and Gold tables locally.",
+        "Ten models · 49 data tests · cutoff 2026-06-30."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Grounded message triage",
+      "items": [
+        "The model proposes; Python checks evidence and policy coverage.",
+        "Detected fraud and account-specific cases require human handling.",
+        "Reports record reply, handoff or discard decisions; no tickets are sent."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Reproducible local prototypes",
+      "items": [
+        "Recorded outputs and offline checks need no API key.",
+        "Live calls send message text with store=False; sender is omitted.",
+        "API failures stay visible as error rows in the report."
+      ]
+    }
+  ]
+}

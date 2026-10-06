@@ -1,6 +1,9 @@
 # Personal notes
 .dev-notes/
 
+# Diagram authoring artifacts
+.archify/
+
 # Editor
 .vscode/
 
