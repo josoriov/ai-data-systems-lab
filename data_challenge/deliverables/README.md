@@ -31,7 +31,7 @@ to `outputs/`. It is safe to run again from scratch.
   normalization and reversals) and `int_installment_status` (FIFO allocation at
   every month-end, used for monthly PAR30).
 - **Gold** — `agg_merchant_monthly` and `dm_loan_delinquency_snapshot`.
-- **Answers** — the seven `analyses/q*.sql` files produce CSV reports.
+- **Answers** — the seven `analyses/q*.sql` files back `RESULTS.md`.
 
 `agg_merchant_monthly` joins `dim_merchant` on the version active on each event
 date (application, disbursement, or snapshot), so metrics respect the category
@@ -47,3 +47,5 @@ a merchant held at the time. The result stays at the required
   totals are exact and reproducible instead of accumulating float noise.
 - FIFO payment allocation is one set-based model, not a row-by-row loop: see the
   header comment in `models/silver/int_installment_status.sql`.
+
+See [RESULTS.md](RESULTS.md) for the figures and reconciliations.
