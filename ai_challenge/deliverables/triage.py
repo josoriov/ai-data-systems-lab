@@ -470,7 +470,8 @@ def triage_message(
             **decision.model_dump(mode="json"),
             "error": None,
         }
-    except Exception as exc:  # One failed request should not lose the batch.
+    # One failed request should not lose the batch.
+    except Exception as exc:  # noqa: BLE001
         return error_result(message.id, exc)
 
 
