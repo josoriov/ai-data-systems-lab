@@ -16,6 +16,8 @@
 
 # Env files
 **.env
+.env.*
+!.env.example
 
 # dbt and DuckDB artifacts
 data_challenge/deliverables/target/

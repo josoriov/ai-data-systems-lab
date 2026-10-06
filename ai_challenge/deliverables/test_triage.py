@@ -1,14 +1,17 @@
 """Focused checks for the triage contract and safety rules."""
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
 
 from triage import (
     AUTO_ANSWERS,
+    ERROR_MESSAGE,
     Decision,
     Message,
     apply_safety_rules,
+    error_result,
     read_messages,
     summarize,
 )
@@ -165,6 +168,17 @@ class TriageTests(unittest.TestCase):
         self.assertEqual((in_scope.action, in_scope.queue), ("escalar_humano", "cx"))
         self.assertEqual((noise.action, noise.priority), ("descartar", "baja"))
         self.assertFalse(any(noise.entities.model_dump().values()))
+
+    def test_error_result_does_not_leak_exception_text(self):
+        secret = "sk-live-FAKE123"
+        result = error_result(
+            "MSG-TEST", RuntimeError(f"auth failed with key {secret}")
+        )
+        serialized = json.dumps(result)
+        self.assertNotIn(secret, serialized)
+        self.assertNotIn("auth failed", serialized)
+        self.assertEqual(result["error"]["type"], "RuntimeError")
+        self.assertEqual(result["error"]["message"], ERROR_MESSAGE)
 
     def test_summary_excludes_technical_errors_from_ratio(self):
         success = {

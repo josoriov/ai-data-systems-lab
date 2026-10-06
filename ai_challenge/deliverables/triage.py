@@ -415,6 +415,11 @@ def apply_safety_rules(decision: Decision, message: Message) -> Decision:
     return decision
 
 
+# Safe text for exported error rows; exception messages may contain secrets or
+# personal data and must never reach the report.
+ERROR_MESSAGE = "internal processing error"
+
+
 def error_result(message_id: str, exc: Exception) -> dict:
     """Creates a standard output row when one message cannot be processed"""
     return {
@@ -435,7 +440,7 @@ def error_result(message_id: str, exc: Exception) -> dict:
         "queue": None,
         "draft_reply": None,
         "policy_refs": [],
-        "error": {"type": type(exc).__name__, "message": str(exc)[:300]},
+        "error": {"type": type(exc).__name__, "message": ERROR_MESSAGE},
     }
 
 
