@@ -86,3 +86,10 @@ production warehouse.
 Development notes document [data assumptions](data_challenge/deliverables/ASSUMPTIONS.md),
 [AI-assisted SQL work](data_challenge/deliverables/AI_LOG.md), and
 [triage development and review](ai_challenge/deliverables/HOW_I_WORKED.md).
+
+## License
+
+The original source code and documentation in this repository are released
+under the [MIT License](LICENSE). The synthetic datasets, fictional policy
+documents, and generated outputs derived from them are not covered by that
+license and remain subject to their own terms.
