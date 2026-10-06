@@ -30,10 +30,11 @@ The default is eight workers. Messages are still written in input order.
 
 ## Design
 
-The implementation uses two files:
+There are only three implementation files:
 
 - `triage.py` has the schemas, prompt, model call, safety rules, batch runner,
   and summary;
+- `test_triage.py` checks the business boundaries without calling the API; and
 - `run.sh` is the setup-and-run entry point.
 
 The taxonomy and four policy files are included in the model instructions. Each
@@ -59,6 +60,20 @@ and that text can itself contain document numbers or other personal data. The
 sample is synthetic; a real rollout would still need an approved provider,
 retention policy, and a decision on whether those values should be redacted
 before the call.
+
+## Test
+
+From this directory, create the environment and install dependencies without
+calling the model:
+
+```sh
+test -x .venv/bin/python || uv venv --python 3.13 .venv
+uv pip install --python .venv/bin/python -r requirements.txt
+.venv/bin/python -m unittest -v
+```
+
+The seven tests need no API key or network access once dependencies are installed.
+Live triage calls incur provider usage and send the message text to the API.
 
 ## Limits of this prototype
 
